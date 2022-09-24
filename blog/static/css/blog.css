@@ -1,0 +1,215 @@
+/*                 color pallette used                   */
+/*                                                       */
+/* https://coolors.co/a393bf-9882ac-73648a-453750-0c0910 */
+/*                                                       */
+/*                 color pallette used                   */
+
+
+html{
+background-color: rgba(163, 147, 191, .1);
+}
+
+.body-block{
+  background-color: rgba(163, 147, 191, 0);
+
+}
+
+.navbar-custom{
+  background-color: #453750 !important;
+}
+
+.blogimage{
+  border: 2px solid #A393BF;
+  border-radius: 10px;
+  box-shadow: #453750 0 0 8px;
+  margin: 10px;
+  max-width: 75%;
+}
+
+.editable{
+  border: 2px solid black;
+  border-radius: 10px;
+  font-family: 'Montserrat';
+  font-weight: bold;
+}
+
+.titlebox{
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.authorbox{
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.spacerbox{
+  margin-top: 20px;
+}
+
+.modbuttons{
+  border-radius: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.commentauthor{
+  color: #73648A;
+  margin: 20px;
+  text-align: right;
+
+}
+
+.commentdate{
+  color: #73648A;
+  text-align: left;
+  margin: 20px;
+
+}
+
+.commentbox{
+  border: 1px solid #0C0910;
+  border-radius: 30px;
+  margin: 10px;
+}
+
+.commenttext{
+  color: black;
+  text-align: left;
+  font-size: 1.5em;
+  margin: 10px;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  
+
+}
+
+.dividerbar{
+  margin-left: 10%;
+  margin-right: 10%;
+  border: 2px;
+  border-top: 2px solid #0C0910;
+  width: 80%;
+}
+
+.postlisttitles{
+  color:#0C0910;
+
+
+}
+
+.postlisttext{
+  color: #73648A;
+}
+
+
+
+.post{
+  border: 4px solid #A393BF;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 15px;
+  background-color: white;
+  font-family: 'Ubuntu';
+  box-shadow: #73648A 2px 2px 30px;
+  color: #0C0910;
+  
+
+}
+
+.postcontent{
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: bold;
+  font-size: 2em !important;
+}
+
+
+.centerstage{
+width: 60%;
+
+}
+
+
+.techfont{
+    font-family: 'Ubuntu';
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.bigbrand{
+    font-size: 1.5em;
+}
+
+
+.postdate{
+  text-align: center;
+  color: #9882AC;
+  font-size: 1.25em;
+}
+
+.posttitle{
+  font-family: 'Ubuntu';
+    font-size: 3em;
+    text-align: center;
+    color:black;
+}
+
+.postcontent{
+
+  font-size: 1.5em;
+  color: black;
+  text-align: justify;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.btn-comment{
+  position: absolute;
+  right: 0px;
+}
+
+/* color change below */
+  
+  .loader {
+   
+    filter:hue-rotate(0deg);
+    color:linear-gradient(45deg,#0f8,#08f);
+    animation:hue 10000ms infinite linear;
+   
+  }
+
+  @keyframes spinify {
+    0% {
+      transform: translate(0px,0px);
+      
+    }
+    33% {
+      transform: translate(0px,24px);
+      border-radius:100%;
+      width:10px;
+      height:10px;
+   
+    }
+     66% {
+      transform:translate(0px,-16px);
+    }
+    
+     88% {
+      transform:translate(0px,4px);
+       
+    }
+    100% {
+      transform:translate(0px,0px);
+    }
+  }
+  @keyframes hue{
+    0%{filter: hue-rotate(0deg);}
+    100%{filter:hue-rotate(360deg);}
+    
+  }

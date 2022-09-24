@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    {% for post in post_list %}
+    <div class="row">
+
+        <div class="post text-center col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h1>
+                <a class="postlisttitles" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+            </h1>
+    
+            <div class="date postlisttext">
+                <p>Published on: {{post.published_date|date:"m/d/y"}}</p>
+    
+            </div>
+    
+            <a class="postlisttext" href="{% url 'post_detail' pk=post.pk %}">Updates: {{post.approve_comments.count}}</a>
+
+        </div>
+        
+
+    </div>
+    {% endfor %}
+{% else %}
+<div class="row">
+    <div class="post text-center col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h1>You do not have permission to view this page. Please login using the button below or the icon in the top right corner.</h1>
+        <a href="{% url 'login' %}" class="modbuttons btn btn-success" >Login</a>
+    </div>
+    
+</div>
+
+
+{% endif %}
+
+    
+
+{% endblock content %}

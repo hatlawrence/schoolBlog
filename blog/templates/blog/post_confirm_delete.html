@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+
+{% if user.is_staff %}
+    <div class="row">
+
+        <div class="post text-center col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <form method="POST">
+                {% csrf_token %}
+                <p>Are you sure you want to delete {{object}}?</p>
+                <input type="submit" class="modbuttons btn btn-danger" value="Confirm">
+        
+            </form>
+
+        </div>
+        
+
+    </div>
+{% else %}
+<h1>You do not have permission to view this page.</h1>
+{% endif %}
+
+
+
+    
+{% endblock content %}

@@ -1,0 +1,45 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+{% if user.is_staff %}
+
+    {% for post in post_list %}
+        <div class="row">
+
+            <div class="post text-center col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                
+                
+                    <p class="date postlisttext">
+                        Created: {{post.created_date|date:'d-m-Y'}}
+                    </p>
+            
+                    <h1 ><a class="postlisttitles" href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h1>
+            
+                    <p class="postlisttext">
+                        {{post.text|safe|truncatechars:200}}
+                    </p>
+            
+                
+                
+
+            </div>
+            
+
+        </div>
+        {% empty %}
+        <h1>No drafts yet...</h1>
+
+        
+    {% endfor %}
+
+{% else %}
+
+<h1>You do not have permission to view this page.</h1>
+
+{% endif %}
+
+
+
+
+{% endblock content %}
